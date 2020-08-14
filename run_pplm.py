@@ -377,6 +377,7 @@ def get_bag_of_words_indices(bag_of_words_ids_or_paths: List[str], tokenizer) ->
         print(filepath)
         with open(filepath, "r") as f:
             words = f.read().strip().split("\n")
+            print(words)
         bow_indices.append(
             [tokenizer.encode(word.strip(),
                               add_prefix_space=True,
