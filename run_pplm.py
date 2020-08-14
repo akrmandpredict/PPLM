@@ -67,7 +67,6 @@ BAG_OF_WORDS_ARCHIVE_MAP = {
     'space': "https://s3.amazonaws.com/models.huggingface.co/bert/pplm/bow/space.txt",
     'technology': "https://s3.amazonaws.com/models.huggingface.co/bert/pplm/bow/technology.txt",
     'cacif': "./paper_code/wordlists/CACIF_translated.txt",
-    
 }
 
 DISCRIMINATOR_MODELS_PARAMS = {
@@ -369,12 +368,13 @@ def get_classifier(
 def get_bag_of_words_indices(bag_of_words_ids_or_paths: List[str], tokenizer) -> \
         List[List[List[int]]]:
     bow_indices = []
-    breakpoint()
     for id_or_path in bag_of_words_ids_or_paths:
+        print(id_or_path)
         if id_or_path in BAG_OF_WORDS_ARCHIVE_MAP:
             filepath = cached_path(BAG_OF_WORDS_ARCHIVE_MAP[id_or_path])
         else:
             filepath = id_or_path
+        print(filepath)
         with open(filepath, "r") as f:
             words = f.read().strip().split("\n")
         bow_indices.append(
