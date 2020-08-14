@@ -65,7 +65,7 @@ BAG_OF_WORDS_ARCHIVE_MAP = {
     'science': "https://s3.amazonaws.com/models.huggingface.co/bert/pplm/bow/science.txt",
     'space': "https://s3.amazonaws.com/models.huggingface.co/bert/pplm/bow/space.txt",
     'technology': "https://s3.amazonaws.com/models.huggingface.co/bert/pplm/bow/technology.txt",
-    'cacif':"./paper_code/wordlists/CACIF_translated.txt",
+    'cacif': "./paper_code/wordlists/CACIF_translated.txt",
     
 }
 
